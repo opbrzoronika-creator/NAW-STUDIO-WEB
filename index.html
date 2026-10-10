@@ -13,6 +13,46 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="apple-mobile-web-app-title" content="NAW STUDIO" />
+  <script type="module" crossorigin src="/assets/index-DiDvhkzz.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Dtbt-AV2.css">
+  
+  <!-- Tambahan CSS untuk membatasi tampilan hanya untuk PC -->
+  <style>
+    /* Secara default pesan mobile disembunyikan */
+    #pesan-mobile {
+      display: none;
+    }
+    
+    /* Jika lebar layar kurang dari 1024px (Mobile & Tablet) */
+    @media screen and (max-width: 1024px) {
+      /* Sembunyikan aplikasi utama */
+      #root {
+        display: none !important; 
+      }
+      /* Tampilkan pesan peringatan dengan gaya yang sesuai tema gelap */
+      #pesan-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        background-color: #121212; 
+        color: #00ffcc; /* Warna hijau/cyan neon */
+        font-family: Arial, sans-serif;
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+    }
+  </style>
 </head>
-<body><div id="root"></div><script type="module" src="/src/main.jsx"></script></body>
+<body>
+  <!-- Elemen peringatan yang akan muncul di HP -->
+  <div id="pesan-mobile">
+    Maaf, UI NAW STUDIO saat ini dioptimalkan dan hanya dapat diakses melalui layar PC/Desktop.
+  </div>
+
+  <div id="root"></div>
+</body>
 </html>
